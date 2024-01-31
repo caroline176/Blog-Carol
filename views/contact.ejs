@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <link rel="stylesheet" href="contact.css">
+</head>
+<main>
+ <h2>Entre em Contato</h2>
+ <p>Estamos ansiosos para ouvir de você. Use o formulário abaixo para nos enviar uma mensagem:</p>
+
+ <form id="contact-form">
+ <label for="name">Nome:</label>
+ <input type="text" id="name" name="name" required>
+ <br> 
+
+ <label for="email">E-mail:</label>
+ <input type="text" id="email" name="email" required>
+ <br>
+
+ <label for="message">Mensagem:</label>
+ <textarea id="message" name="message" rows="4" required></textarea>
+ <br>
+
+ <button type="submit">Enviar Mensagem</button>
+ </form>
+</main>
+
+<!-- Mesmo rodapé do home.ejs -->
+
+
+<script>
+ document.addEventListener('DOMContentLoaded', function () {
+ const contactForm = document.getElementById('contact-form');
+
+ contactForm.addEventListener('submit', function (event) {
+ event.preventDefault();
+
+ // Coletar dados do formulário
+ const formData = new FormData(contactForm);
+ const formDataObject = {};
+ formData.forEach((value, key) => {
+ formDataObject[key] = value;
+ });
+
+ // Aqui você pode adicionar lógica para enviar os dados (por exemplo, usando Ajax)
+
+ // Exemplo: exibindo dados no console
+ console.log('Dados do formulário:', formDataObject);
+
+ // Limpar o formulário
+ contactForm.reset();
+ });
+ });
+</script>
+
+</html>

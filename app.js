@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 4000;
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -16,6 +16,10 @@ app.get('/about', (req, res) => {
 
 app.get('/contact', (req, res) => {
   res.render('contact');
+});
+
+app.get('/login', (req, res) => {
+  res.render('login');
 });
 
 app.listen(port, () => {

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Login - Meu Blog Pessoal</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 20;
+            padding: 50;
+            display: flex;
+            align-items: 20;
+            justify-content: center;
+            height: 79vh;
+        }
+
+        form {
+            max-width: 700px;
+            background-color: #bdbbbb;
+            padding: 150px;
+            border-radius: 30px;
+            box-shadow: 10 10 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: 40px;
+            margin-bottom: 30px;
+            font-weight: 30px;
+        }
+
+        input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 50px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+
+    <form id="loginForm">
+        <h2>Login</h2>
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="button" onclick="login()">Entrar</button>
+    </form>
+
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Verifique as credenciais (em um ambiente de produção, isso seria feito no servidor)
+            if (username === 'seuUsuario' && password === 'suaSenha') {
+                alert('Login bem-sucedido!');
+                // Aqui você pode redirecionar o usuário para a página principal do blog
+            } else {
+                alert('Credenciais inválidas. Tente novamente.');
+            }
+        }
+    </script>
+
+</body>
+</html>
